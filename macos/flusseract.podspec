@@ -64,6 +64,7 @@ Flutter Tesseract OCR FFI plugin library.
     :execution_position => :before_compile
   }
   s.xcconfig = {
+    'SYSTEM_HEADER_SEARCH_PATHS' => '$(inherited) /opt/homebrew/include',
     'HEADER_SEARCH_PATHS' => '$(inherited) ${SRCROOT}/flusseract/include',
     'OTHER_LDFLAGS' => '$(inherited) -all_load',
 
@@ -73,7 +74,7 @@ Flutter Tesseract OCR FFI plugin library.
     # via SRCROOT it still fails as SRCROOT seems to have different
     # paths in the build phase. The following paths were found to work
     # via trial and error.
-    'LIBRARY_SEARCH_PATHS' => '$(inherited) ${SRCROOT}/flusseract/lib ${SRCROOT}/Pods/flusseract/lib'
+    'LIBRARY_SEARCH_PATHS' => '$(inherited) /opt/homebrew/lib ${SRCROOT}/flusseract/lib ${SRCROOT}/Pods/flusseract/lib'
   }
   s.libraries = [
     'z',
