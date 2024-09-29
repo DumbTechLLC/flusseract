@@ -23,4 +23,5 @@ cmake -G"Unix Makefiles" \
   -Dtiff-contrib=OFF \
   -Dtiff-docs=OFF \
   -Dwebp=OFF \
+  -Dlzma=OFF \
   $SOURCE_DIR
